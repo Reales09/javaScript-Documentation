@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Seccion13 bom</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <h1 class="title">Seccion13 bom</h1>
+    <button id="boton1">¡Púlsame!</button>
+    <div id="container">
+        <p class="principal">
+            Parrafo 1 <br> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sapien nulla, tincidunt nec ante
+            ut, porta tempus dui. Integer consequat rhoncus tempus. Etiam nulla nisl, mattis a nisl pulvinar, tempor elementum
+            lectus. Morbi sed tortor luctus, faucibus dolor eu, ullamcorper arcu. Aenean condimentum quis nisi et malesuada.
+            Morbi nec mi et turpis condimentum suscipit quis vel arcu. Vestibulum at mi vitae urna gravida consectetur. Nam
+            suscipit ac purus a bibendum.
+        </p>
+
+    </div>
+
+    <script>
+        //********************************
+        //*** Propiedades y métodos del BOM
+        var boton1 = document.getElementById('boton1');
+        var principal = document.getElementsByClassName('principal')[0];
+
+        console.log('innerHeight: ', window.innerHeight);
+        console.log('innerWidth: ', window.innerWidth);
+
+        localStorage.setItem('contenido', 'Código y café es una gran combinación')
+
+
+        boton1.addEventListener('click', function () {
+            var contenido = localStorage.getItem('contenido');
+            principal.innerHTML = contenido;
+
+            window.history.forward();
+            window.history.back();
+            window.history.go(3);
+        })
+    </script>
+
+</body>
+
+</html>

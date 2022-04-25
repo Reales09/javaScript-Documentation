@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Seccion13</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <h1 class="title">Lorem ipsum</h1>
+    <button id="boton">¡Púlsame!</button>
+    <div id="container">
+        <p class="principal">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sapien nulla, tincidunt nec ante ut, porta tempus dui. Integer
+            consequat rhoncus tempus. Etiam nulla nisl, mattis a nisl pulvinar, tempor elementum lectus. Morbi sed tortor
+            luctus, faucibus dolor eu, ullamcorper arcu. Aenean condimentum quis nisi et malesuada. Morbi nec mi et turpis
+            condimentum suscipit quis vel arcu. Vestibulum at mi vitae urna gravida consectetur. Nam suscipit ac purus a
+            bibendum.
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sapien nulla, tincidunt nec ante ut, porta tempus dui. Integer
+            consequat rhoncus tempus. Etiam nulla nisl, mattis a nisl pulvinar, tempor elementum lectus. Morbi sed tortor
+            luctus, faucibus dolor eu, ullamcorper arcu. Aenean condimentum quis nisi et malesuada. Morbi nec mi et turpis
+            condimentum suscipit quis vel arcu. Vestibulum at mi vitae urna gravida consectetur. Nam suscipit ac purus a
+            bibendum.
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sapien nulla, tincidunt nec ante ut, porta tempus dui. Integer
+            consequat rhoncus tempus. Etiam nulla nisl, mattis a nisl pulvinar, tempor elementum lectus. Morbi sed tortor
+            luctus, faucibus dolor eu, ullamcorper arcu. Aenean condimentum quis nisi et malesuada. Morbi nec mi et turpis
+            condimentum suscipit quis vel arcu. Vestibulum at mi vitae urna gravida consectetur. Nam suscipit ac purus a
+            bibendum.
+        </p>
+    </div>
+
+    <script>
+        //********************************
+        //*** Entendiendo el DOM y el BOM
+
+        /*
+        var boton = document.getElementById("boton");
+
+        boton.addEventListener('click', function () {
+           console.log(window.location.href);
+
+            window.location.href = 'http://github.com/yacafx';
+        })
+        */
+
+        // Propiedades y métodos del DOM
+
+        var boton = document.getElementById("boton");
+        
+        var todosLosParrafos = document.getElementsByTagName('P');
+        var parrafosPorClase = document.getElementsByClassName('principal')[0].textContent;
+       
+        var foto = document.createElement('img');
+        foto.src = "foto1.jpg";
+        foto.name = "foto1";
+        foto.width = 400;
+        document.body.appendChild(foto);
+
+        foto.addEventListener('click', function(){
+
+            if (this.name === 'foto1') {
+                this.src = 'foto2.jpg';
+                this.name = 'foto2';
+            } else {
+                this.src = 'foto1.jpg';
+                this.name = 'foto1';
+            }
+
+        })
+
+    </script>
+
+</body>
+
+</html>
